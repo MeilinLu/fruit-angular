@@ -20,6 +20,13 @@ export class HomeComponent implements OnInit {
   alertMe2(val){
     alert(val);
   }
+
+  // #13 2 Way Data Binding
+  fruit = {
+    name: "apple",
+    color: "red",
+    price: "$1.99"
+  }
   constructor() { }
 
   ngOnInit() {

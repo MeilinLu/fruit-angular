@@ -18,3 +18,15 @@
 <p>Result: I like cherry!</p>
 <button type="button" (click)="alertMe2(myString)"> alertMe2(myString)</button>
 <p>Result: I like cherry!</p>
+<br>
+<!-- 2 Way Data Binding -->
+<label> Name: </label>
+<input [(ngModel)]="fruit.name" />
+<label> Color: </label>
+<input [(ngModel)]="fruit.color" />
+<label> Price: </label>
+<input [(ngModel)]="fruit.price" />
+
+<p>{{fruit.name}}</p>
+<p>{{fruit.color}}</p>
+<p>{{fruit.price}}</p>
