@@ -6,3 +6,15 @@
 <input [required]="myBoolean" />
 
 <input value="{{myString}}" />
+<input required="{{myBoolean}}" />
+<br>
+<br>
+<!-- Event Binding-->
+<button type="button"(click)="alertMe1()"> alertMe1()  Hi, there</button>
+<p>Result: Hi, there!</p>
+<button type="button" (click)="alertMe2('I like apple')"> alertMe2('I like apple')</button>
+<p>Result: I like apple!</p>
+<button type="button" (click)="alertMe1(myString)"> alertMe1(myString)</button>
+<p>Result: I like cherry!</p>
+<button type="button" (click)="alertMe2(myString)"> alertMe2(myString)</button>
+<p>Result: I like cherry!</p>

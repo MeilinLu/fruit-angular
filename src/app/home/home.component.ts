@@ -10,8 +10,16 @@ export class HomeComponent implements OnInit {
   homeTitle = "Welcome to the fruit-app homepage!";
 
   // #11 Property Binding
-  myString = 'I like 1323';
+  myString = 'I like cherry';
   myBoolean = true;
+
+  // #12 Event Binding
+  alertMe1(){
+    alert('Hi, there!');
+  }
+  alertMe2(val){
+    alert(val);
+  }
   constructor() { }
 
   ngOnInit() {
