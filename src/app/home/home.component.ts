@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -28,8 +28,14 @@ export class HomeComponent implements OnInit {
     price: "$1.99"
   }
 
-  // #14 Custom Property Binding
+  // #14 Custom Property Binding @Input from root
   @Input() smoothy;
+  // #15 Custom Property Binding @Output to root
+  @Output() onSale = new EventEmitter();
+
+  fireSaleEvent(e){
+    this.onSale.emit(e);
+  }
   constructor() { }
 
   ngOnInit() {
