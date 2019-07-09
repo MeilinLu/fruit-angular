@@ -1,2 +1,12 @@
-<p>directory works!</p>
 <p>{{fruit}}</p>
+
+<p [ngClass]="{'blue': false, 'red': true, 'underline': true}">
+  directory works!
+</p>
+
+
+<style media="screen">
+  .blue{color: blue;}
+  .red{color: red;}
+  .underline{text-decoration: underline;}
+</style>
