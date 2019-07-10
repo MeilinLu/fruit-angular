@@ -6,12 +6,13 @@ Directives: -- Arribute Directive: [ngClass]
 -->
 
 <!-- #19 Attribute Directives [ngClass] -->
-
+<!--
 <p [ngClass]="{'blue': false, 'red': true, 'underline': true}">
   directory works!
 </p>
-<p *ngIf="test">Only show if test is true</p>
+-->
 
+<!--
 <p [ngClass]="classes">
   directory works!
 </p>
@@ -20,3 +21,27 @@ Directives: -- Arribute Directive: [ngClass]
   .red{color: red;}
   .underline{text-decoration: underline;}
 </style>
+-->
+
+<!-- #19 Structural Directive: *ngIf -->
+<!--
+<p *ngIf="test">Only show if test is true</p>
+-->
+
+<!-- #20 Structural Directive: *ngFor -->
+<h2> Fruits List </h2>
+<ul id="fruit-listing">
+  <li *ngFor="let fruit of fruits">
+    <div class="single-fruit">
+      <!-- Fruit Color -->
+      <!-- Fruit Name -->
+      <h3>
+        <span [ngStyle]="{color: fruit.color}">
+        {{fruit.color}} {{fruit.name}}
+        </span>
+        <!-- Fruit Price -->
+        {{fruit.price}}
+      </h3>
+    </div>
+  </li>
+</ul>
