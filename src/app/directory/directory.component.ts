@@ -37,9 +37,10 @@ export class DirectoryComponent implements OnInit {
   ngOnInit() {
   }
 
+  /*
   public testLogger() {
     this.loggerService.printLoggerInfo();
   }
-
+*/
 
 }

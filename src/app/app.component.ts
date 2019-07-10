@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HomeComponent} from './home/home.component';
+import { DisplayLoggerService } from './display-logger.service';
 
 @Component({
   selector: 'app-root',
@@ -16,5 +17,12 @@ export class AppComponent {
   }
   sale(e){
     alert("Orange is on sale!");
+  }
+
+  constructor(public loggerService: DisplayLoggerService){
+  }
+
+  public testLogger() {
+    this.loggerService.printLoggerInfo();
   }
 }
