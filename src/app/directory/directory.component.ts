@@ -23,7 +23,7 @@ export class DirectoryComponent implements OnInit {
   fruits = [
     {name: "Apple", color: "red", price:"$1.99"},
     {name: "Apple", color: "green", price:"$1.99"},
-    {name: "Cherry", color: "yellow", price:"$9.99"},
+    {name: "Cherry", color: "red", price:"$9.99"},
     {name: "Banana", color: "yellow", price:"$0.99"},
     {name: "Blueberry", color: "purple", price:"$5.99"},
     {name: "Pear", color: "green", price:"$2.99"}

@@ -42,6 +42,10 @@ Directives: -- Arribute Directive: [ngClass]
         <!-- Fruit Price -->
         {{fruit.price}}
       </h3>
+      <!-- #21 Pipes-->
+      <h3>color uppercase -- <span [ngStyle]="{color: fruit.color}">{{fruit.color | uppercase}}</span></h3>
+      <h3>price slice:1 -- {{fruit.price | slice:1}}</h3>
+      <h3>name slice:1:3 -- {{fruit.name | slice:1:3}}</h3>
     </div>
   </li>
 </ul>
