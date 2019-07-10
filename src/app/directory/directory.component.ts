@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FilterPipe } from '../filter.pipe';
+import { DisplayLoggerService } from '../display-logger.service';
 
 @Component({
   selector: 'app-directory',
@@ -30,9 +31,15 @@ export class DirectoryComponent implements OnInit {
     {name: "Pear", color: "green", price:"$2.99"}
   ]
 
-  constructor(){ }
+  constructor(public loggerService: DisplayLoggerService){
+  }
 
   ngOnInit() {
   }
+
+  public testLogger() {
+    this.loggerService.printLoggerInfo();
+  }
+
 
 }
