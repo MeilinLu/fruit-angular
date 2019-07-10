@@ -28,10 +28,21 @@ Directives: -- Arribute Directive: [ngClass]
 <p *ngIf="test">Only show if test is true</p>
 -->
 
+
 <!-- #20 Structural Directive: *ngFor -->
 <h2> Fruits List </h2>
+
+<!-- #22 Creating a FIlter Piper -->
+<!-- Create a Search Form -->
+<form id="filter">
+  <label> Filter fruits by name: </label>
+  <input type="text" name="term" [(ngModel)]="term" />
+</form>
+
+
 <ul id="fruit-listing">
-  <li *ngFor="let fruit of fruits">
+  <!-- #22 Creating a FIlter Piper -->
+  <li *ngFor="let fruit of fruits | filter:term">
     <div class="single-fruit">
       <!-- Fruit Color -->
       <!-- Fruit Name -->
@@ -43,9 +54,11 @@ Directives: -- Arribute Directive: [ngClass]
         {{fruit.price}}
       </h3>
       <!-- #21 Pipes-->
+      <!--
       <h3>color uppercase -- <span [ngStyle]="{color: fruit.color}">{{fruit.color | uppercase}}</span></h3>
       <h3>price slice:1 -- {{fruit.price | slice:1}}</h3>
       <h3>name slice:1:3 -- {{fruit.name | slice:1:3}}</h3>
+      -->
     </div>
   </li>
 </ul>
