@@ -1,14 +1,20 @@
 <p>{{fruit}}</p>
 
 <!--
+Directives: -- Arribute Directive: [ngClass]
+            -- Structural Directive: *ngIf, *ngFor
+-->
+
+<!-- #19 Attribute Directives [ngClass] -->
+
 <p [ngClass]="{'blue': false, 'red': true, 'underline': true}">
   directory works!
 </p>
--->
+<p *ngIf="test">Only show if test is true</p>
+
 <p [ngClass]="classes">
   directory works!
 </p>
-
 <style media="screen">
   .blue{color: blue;}
   .red{color: red;}

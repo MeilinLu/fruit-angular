@@ -14,11 +14,10 @@ export class DirectoryComponent implements OnInit {
     this.fruit = route.snapshot.params['fruit'];
   }
   */
-  
+
   // #19 Directives Introduction
-  classes = {'blue':false, 'red': true, 'underline': false};
-
-
+  classes = {'blue':true, 'red': false, 'underline': true};
+  test = true;
   constructor(){ }
 
   ngOnInit() {
